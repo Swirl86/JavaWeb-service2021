@@ -2,9 +2,6 @@ import React from "react";
 import starWarsIconL from "../img/star-wars-icon-left.png";
 import starWarsIconR from "../img/star-wars-icon-right.jpg";
 
-//import { Button } from "@material-ui/core";
-//import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-
 const Navbar = ({ loggedIn }) => {
     return (
         <div className="Navbar">
@@ -17,14 +14,3 @@ const Navbar = ({ loggedIn }) => {
 };
 
 export default Navbar;
-
-/*{loggedIn && (
-                <Button
-                    id="logout-button"
-                    variant="contained"
-                    endIcon={<ExitToAppIcon />}
-                    color="secondary"
-                >
-                    Logout
-                </Button>
-            )} */

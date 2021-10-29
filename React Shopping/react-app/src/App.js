@@ -127,12 +127,10 @@ const App = () => {
                     resetStates={updateState}
                     addProduct={addProduct}
                 />
-
                 <div>
                     <Products />
                     {products.length === 0 && <EmptyProductList />}
                 </div>
-
                 <div>
                     <FavoriteProducts />
                     {favoriteProducts.length === 0 && <EmptyProductList />}
