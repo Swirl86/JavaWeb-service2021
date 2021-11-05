@@ -1,0 +1,434 @@
+/*----------------------------------------------------------------------------
+		Basic elements
+----------------------------------------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: #DAE0E6;
+}
+
+.app {    
+    margin-top: 8em !important;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input, textarea {
+    margin: 6px 0px 6px 0px;
+    text-align: center;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+
+
+/*----------------------------------------------------------------------------
+		Messages
+----------------------------------------------------------------------------- */
+.message {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 1rem !important;
+    margin: auto;
+    width: 50%;
+    text-align: center
+}
+
+/*----------------------------------------------------------------------------
+		Navbar
+----------------------------------------------------------------------------- */
+
+.Navbar {
+    position: fixed;
+    top: 0;
+    background-color: #fffffff5;
+    width: 100%;
+    height: 6.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;    
+}
+
+.Navbar-title {
+    /*margin-right: 5em;*/
+    font-size: 48px;
+    color: #FF4500;
+    text-shadow: -2px 0 #1B2426, 0 2px #1B2426, 2px 0 #1B2426, 0 -2px #1B2426;
+}
+
+.Navbar-title:hover {
+    cursor: default;
+}
+
+.Navbar-img-left {
+    margin-left: 1em;
+    height: 3.5rem;
+}
+.Navbar-img-left:hover {
+    cursor: pointer;
+}
+
+.Navbar-right {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Navbar-img-right {
+    height: 6rem;
+}
+
+@media (max-width: 500px) {
+    .Navbar-img-left,
+    .Navbar-img-right {
+        display: none;
+    }
+    .Navbar {
+        flex-direction: column;
+    }
+    .Navbar-title {
+        margin-right: 0rem !important;
+        display: inline-block;
+    }
+}
+
+/*----------------------------------------------------------------------------
+		Main container and misc
+----------------------------------------------------------------------------- */
+
+.container {
+    margin-top: 1em !important;
+    margin: 0 auto;
+    background: #f8f9fa;/*#e8e8e8; /*#fffffff5*/
+    border-radius: 4px;
+    /*max-width: 500px; width: 55rem;*/
+    width: 50%;
+    padding: 1em;
+    margin-bottom: 1.5rem;
+
+    box-shadow: 0 4px 8px 0 
+      rgba(0, 0, 0, 0.2), 
+        0 6px 20px 0 
+      rgba(0, 0, 0, 0.19);
+}
+
+.space-left {
+    margin-left: 2rem;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.margin-top {
+   margin-top: 1rem;
+}
+
+.no-hover {
+    pointer-events: none;
+}
+/*----------------------------------------------------------------------------
+		Forms
+----------------------------------------------------------------------------- */
+@media all and (min-width: 480px) {
+  .form {
+    text-align: center; 
+  }
+
+  .login form {
+    margin: 0 auto;    
+    max-width: 25rem;
+  }
+
+  .signup form {
+    margin: 0 auto;
+    max-width: 25rem;
+  }
+
+  .post-form form {
+    margin: 0 auto;
+    max-width: 40rem;
+  }
+
+  .post-form form {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+.form-input {
+    width: 25rem;  
+    height: 2rem;  
+    /*border: none;  */
+}
+
+.post-input {
+    width: 100%;  
+    height: 2rem;  
+    text-align: left;  
+}
+
+#login-title, #signup-title {
+    margin-left: 5px;
+}
+
+.post-input-textarea {
+    width: 100%;
+    overflow: auto;
+    resize: vertical;
+    min-height: 5rem;
+    max-height: 30rem;
+    text-align: left; 
+}
+
+
+/*----------------------------------------------------------------------------
+		Posts
+----------------------------------------------------------------------------- */
+
+.post-container {
+    width: 100%;
+    display: flex;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    transition: box-shadow .3s; 
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    padding-right: 5px;
+    /*max-height: 12rem;*/
+}
+
+.post-container:hover {
+    box-shadow: 0 0 11px #898989; 
+    /*outline: 2px solid #898989;*/
+}
+
+.post-wrapper {
+    width: 100%;
+    display: flex;
+    background: #fff;
+    border-radius: 3px;
+    /*margin-top: 0.5em;*/
+    padding-right: 3px;
+}
+
+.post-content-wrapper {
+    width: 100%;
+    margin: 0.5rem 0.5rem;
+}
+
+#post-information-container:hover {
+    cursor: pointer;
+}
+
+.post-details-container {
+    height: auto;
+}
+
+.post-details-wrapper{
+    width: 100%;
+    display: flex;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.post-title {
+    margin-bottom: 0.5em;
+}
+
+.post-description {
+    height: 5rem ;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.post-description, .fade {
+    -webkit-mask-image: linear-gradient(180deg, #000 40%, transparent);
+}
+
+.post-description-details {
+    height: auto;
+}
+
+.post-description-edit {
+    width: 100%;
+    text-align: left;
+    min-height: 5rem;
+    max-height: 40rem;
+    resize: vertical;
+}
+
+/*----------------------------------------------------------------------------
+		Post Created information Row
+----------------------------------------------------------------------------- */
+.post-created-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.post-created-block {
+    margin-top: 0.5em;
+    color: #b1b4b5;
+}
+/*----------------------------------------------------------------------------
+		Post Vote column
+----------------------------------------------------------------------------- */
+.post-vote-wrapper {    
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1em;
+    margin-right: 1rem;
+    /*margin-top: 1.5rem; */
+    background-color: #f1f1f1;/*f8f9fa;*/
+    padding-top: 1.5rem;
+    height: 100%;
+}
+
+.post-up-vote, 
+.post-down-vote {
+    cursor: pointer;
+    border-radius: 2px solid;        
+}
+
+.post-up-vote:hover,
+.post-delete-btn:hover {
+    color: #f60757;    
+    cursor: pointer;
+}
+
+.post-down-vote:hover,
+.post-edit-btn:hover {
+    color: #414cb2;    
+    cursor: pointer;
+}
+
+.post-vote-value {
+    font-weight: bold;
+}
+/*----------------------------------------------------------------------------
+		Comments
+----------------------------------------------------------------------------- */
+
+.post-comment-container {
+    text-align: left;
+    min-height: 5rem;
+    max-height: 30rem;
+    resize: vertical;
+    margin: 0.5rem;
+}
+
+.comment-title {
+    float: left;
+    margin: 0.5rem 0rem;
+}
+
+.post-comment {
+    height: auto;
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/*----------------------------------------------------------------------------
+		Buttons
+----------------------------------------------------------------------------- */
+
+.user-form-button, 
+.post-button, .comment-button {  
+    color: white;
+    margin-top: 5px;
+    width: 6rem;  
+    height: 2.5rem;    
+    border-radius: 5px;      
+    font-size: 20px;   
+    background-color:#008CBA;
+    transition-duration: 0.4s;
+    align-items: center;
+}
+
+.comment-button {
+    width: 8rem; 
+}
+ #signup-button {
+     background-color: orange;
+ }
+
+#login-button:hover, #signup-button:hover, .post-button:hover,  
+.comment-button:hover, #navbar-login-button:hover {
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+#navbar-logout-button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+#login-button:active, #signup-button:active, .post-button:active, 
+#navbar-login-button:active, #navbar-logout-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#logout-button {
+    float: right;
+}
+
+.navbar-button {
+    color: white;
+    margin-top: 5px;
+    width: auto;  
+    height: 40px;   
+    border-radius: 5px;  
+    padding-left: 10px; 
+    padding-right: 10px;   
+    font-size: 20px;   
+    background-color:#008CBA;
+    transition-duration: 0.4s;
+    margin-right: 1rem;
+}
+
+#navbar-logout-button {
+    width: 100px;  
+    background-color: red;
+}
+
+.post-clear-button {
+    background-color: white;
+    color: #008CBA;
+    border: solid 2px #008CBA;
+}
+
+.post-clear-button:hover {
+    background-color:orange;
+}
+
+.btn-space-left {
+    margin-left: 1rem;
+}
